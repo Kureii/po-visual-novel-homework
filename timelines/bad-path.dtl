@@ -1,0 +1,85 @@
+label A2
+[style name="Styl"]
+[background arg="res://graphyc/backgrounds/Spy-workspace.webp" fade="2.0"]
+[wait time="2.0"]
+Lena přichází do nové práce, která se nachází v moderní budově blíže centru města. Kancelář je prostorná, s výhledem na celé město. Je to ohromující kontrast k jejím předchozím pracovním podmínkám.
+Prochází kanceláří a cítí směs úžasu a nejistoty.\
+Tohle je úplně jiný svět. Možná to opravdu bude příležitost, jak změnit svůj život.
+Po krátké orientaci je Lena uvedena do své kanceláře. Po chvíli se objeví její nadřízený, pan Kilián, elegantně oblečený muž s přísným pohledem.
+join Kilian 0
+join Lena (Inquisitor) 4
+Kilian: Leno, vítej v týmu. Tvoje práce je jednoduchá. Budeš sledovat chování lidí ve městě a upozorňovat nás na jakékoli podezřelé aktivity. Je důležité, aby se všechno udrželo pod kontrolou. Je to pro dobro celého města.
+Lena: Sledovat lidi? A co přesně znamená podezřelé aktivity?
+Kilian: Vše, co by mohlo narušit klid a pořádek. Neposlušnost, nepřiměřené chování, vše, co by mohlo ohrozit harmonii našeho města. Tvoje zprávy nám pomohou udržet Aurelia Altum bezpečné a prosperující.
+Lena cítí, jak ji zaplavuje vlna neklidu. Uvědomuje si, že její nová práce není tak ideální, jak se zdála. Přesto si uvědomuje, že nemá jinou možnost. Její přežití závisí na tom, jak dobře se s novou rolí vyrovná.
+Lena: <Empty Text Event>
+- Svou práci budu vykonávat svědomitě!
+	leave Kilian
+	Lena se rozhodla plně přijmout svou novou roli. Začíná pilně sledovat a hlásit podezřelé chování. Její zprávy jsou detailní a rychle si získává důvěru nadřízených.
+	Lena: Je to pro dobro celého města. Musím to udělat.
+	Leny zprávy byly detailní a rychle si získala důvěru nadřízených. S každou další zprávou Lena cítila, jak se její morální kompas postupně mění. Přece jen, co je jeden život proti bezpečí celého města.
+	S postupem času se povaha její práce změnila. Už to nebylo jen o hlášení podezřelých aktivit, ale o přímém zatýkání a výsleších, které byly čím dál krutější. Lena si uvědomovala, že dosáhla bodu, odkud není návratu.
+	leave --All--
+	jump bad-path/A4
+- Nevím jestli je to správné...
+	Lena se snaží vykonávat svou práci, ale každá zpráva, kterou píše, ji naplňuje odporem. Její nadřízení si rychle všimnou jejího nesouhlasu.
+	Kilian: Leno, tvoje zprávy nejsou dostatečně důkladné. Myslím, že bys mohla být užitečnější v jiné roli. Místo špehování bys mohla dělat něco, co ti lépe vyhovuje.
+	Lena: Lena s úlevou, ale i s pocitem ztráty.\
+Možná máte pravdu.
+	Lena je přeřazena na pozici, kde se bude muset vyrovnat s novými výzvami jako společnice.
+	leave --All--
+	jump neutral-path/B3
+- Pokusím se...
+	Lena nedokáže svou práci vykonávat dostatečně dobře. Její zprávy jsou neúplné a často pozdě. Nadřízení ztrácejí trpělivost.
+	Kilian: Leno, tvoje práce nesplňuje naše očekávání. Budeš přeřazena na jinou pozici. Doufám, že tam najdeš způsob, jak být užitečná.
+	Lena smutně kývne.\
+Udělala jsem, co jsem mohla.
+	leave Kilian
+	Lena je přeřazena na jinou pozici, kde bude vykonávat těžkou práci.
+	leave --All--
+	jump happy-path/C3
+
+label A4
+[background arg="res://graphyc/backgrounds/black.webp" fade="1.0"]
+[wait time="1.5"]
+[background arg="res://graphyc/backgrounds/Dungeon-big.webp" fade="2.0"]
+[wait time="2.0"]
+join Lena (Inquisitor) 4
+[wait time="0.5"]
+join Kilian 0
+Kilian: Leno, dnes máš na starost výslech nového podezřelého. Vím, že na tebe můžeme spolehnout.
+Lena pocítí mrazivý chlad po zádech, ale přikývne.\
+Udělám, co je potřeba
+leave Kilian
+[background arg="res://graphyc/backgrounds/Dungeon.webp" fade="2.0"]
+[wait time="2.0"]
+join poor-man 0
+Lena vstoupila do výslechové místnosti a viděla před sebou vyděšeného člověka, který prosil o milost. Lena věděla, že její rozhodnutí v této chvíli určí její osud.
+- Udělám co musím
+	jump bad-path/Sad end
+- Tohle je šílenství!
+	set {killer} = "kilian"
+	Lena se zadívala do očí vyděšeného člověka a uvědomila si, že nemůže pokračovat v tomto šílenství. Její srdce bylo těžké, ale její rozhodnutí pevné.
+	Lena: Odstoupí od vyděšeného člověka.\
+Nemohu pokračovat v tomto šílenství. Musím najít způsob, jak odejít.
+	Lena se pokusila opustit systém a najít nový život mimo jeho dosah. Opuštění systému však nebylo snadné a Lena byla brzy chycena. Její nadřízení ji považovali za zrádce a Lena skončila v rukou těch, kteří se nestarali o milost.
+	leave poor-man
+	join Kilian 0
+	update Lena
+	Kilian: Leno, nikdy se neměla pokoušet utéct.
+	Lena byla krutě mučena, její víra v dobro byla zničena a její život ukončen v agónii, stejně jako mnoho těch, které kdysi sama trýznila.
+	jump neutral-path/Neutral end
+label Sad end
+[wait time="2.0"]
+Lena zhluboka vydechla a v jejích očích se objevil tvrdý, chladný pohled. Její rozhodnutí bylo neúprosné. Nikdo se nemůže postavit proti systému, pomyslela si, a udělala, co musela.
+poor-man: Prosím, nic jsem neudělal. Jen jsem chtěl jídlo pro svou rodinu!
+Lena: Pravidla jsou jasná. Porušil jsi zákon a musíš za to nést následky.
+Každé setkání s oběťmi Leně připomínalo její vlastní ztracenou nevinnost. Přestože v hloubi duše cítila, že to, co dělá, je špatné, její nová identita ji úplně pohltila.
+leave --All--
+[background arg="res://graphyc/backgrounds/black.webp" fade="2.0"]
+[wait time="1.0"]
+[background arg="res://graphyc/backgrounds/Dungeon.webp" fade="2.0"]
+[wait time="2.0"]
+join Lena (Inquisitor) 4
+Lena: Je to pro dobro celého města. Musím to udělat.
+Lena ztrácela poslední zbytky své lidskosti. Stala se strojem na utrpení, nástrojem systému, který kdysi považovala za záchranu

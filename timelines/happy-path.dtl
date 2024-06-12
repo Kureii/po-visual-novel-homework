@@ -1,0 +1,90 @@
+label C2
+[style name="Styl"]
+[background arg="res://graphyc/backgrounds/Hard-work.webp" fade="2.0"]
+[wait time="2.0"]
+join Lena (Hard work) 4
+Lena se ocitla ve své nové práci, která byla fyzicky i psychicky náročná. Každý den ji posílali na různá místa, kde musela vykonávat těžkou práci.
+Lidé v okolí ji často ignorovali, nebrali ji ani jako člověka, což jí dalo příležitost slyšet mnoho věcí, které nebyly určeny pro její uši.
+Lena: S námahou zvedá těžký pytel a posunuje jej na své místo. \
+Tohle je daleko těžší než jsem čekala, ale musím to vydržet.
+Práce byla vyčerpávající a Lena často končila směnu s bolavým tělem a unavenou myslí. Ale její pozice jí umožnila být svědkem rozhovorů a situací, které jí postupně odkrývaly tajemství města.
+join worker-1 1 [ z_index="1" mirrored="true"]
+[wait time="0.5"]
+join worker-2 3 [ z_index="1"]
+worker-1: Slyšel jsi o těch divných setkáních u Nexus Innovate? Prý to nevedou lidé ale stvoření podobné vosám.
+worker-2: Vosí lidé, říkáš? Zní to jako nějaká konspirační teorie. Ale kdo ví, v tomhle městě je všechno možné.
+leave worker-1
+leave worker-2
+Lena se snažila být co nejméně nápadná, zatímco naslouchala. Postupně začala sbírat střípky informací, které jí začaly dávat děsivý obraz toho, kdo skutečně řídí Nexus Innovate.
+- Zvolnit a zpracovat informace
+	Lena byla stále více znechucena tím, co slyšela, a její výkon začal trpět. Nadřízení si brzy všimli jejího poklesu produktivity
+	join c-chef 0
+	[wait time="0.6"]
+	c-chef: Leno, tvoje práce není dostatečně dobrá. Budeš muset odejít.
+	Lena: Rozumím
+	leave --All--
+	Lena byla vyhozena a vrátila se zpět na okraj města, s vědomím, že nikdy nepozná celou pravdu o Aurelia Altum.
+	jump base/D4
+- Dále pokračovat v tvrdé práci
+	Lena se rozhodla pracovat poctivě a využít každé příležitosti, aby naslouchala rozhovorům a pozorovala dění kolem sebe. Postupně se dozvídala stále více.
+	join worker-3 1 [ z_index="1" mirrored="true"]
+	[wait time="0.3"]
+	join worker-2 3 [ z_index="1"]
+	worker-3: Říká se, že na vrcholných schůzkách Nexus Innovate se objevují podivné stíny. Prý to nejsou lidé.
+	Ano, slyšel jsem o tom. Nakonec to jako konspirační teorie nevypadá. 
+	leave worker-3
+	[wait time="0.2"]
+	leave worker-2
+	Lena se dozvěděla, že firmu Nexus Innovate neřídí lidé, ale bytosti přestrojené za lidi. Tato pravda byla šokující a děsivá, ale Lena věděla, že musí pokračovat ve své práci, aby zjistila více.
+	Lena: Musím zjistit, co se děje doopravdy. Nemůžu teď přestat.
+	leave --All--
+	jump happy-path/C3
+
+label C3
+[background arg="res://graphyc/backgrounds/Hard-work-doors.webp" fade="2.0"]
+[wait time="2.0"]
+join Lena (Hard work) 4
+Lena dělala stále těžkou práci a při tom více a více naslouchala rozhovorům kolem sebe. Postupně začala rozplétat skutečnou podstatu moci ve městě.
+join worker-1 1 [ z_index="1"]
+[wait time="0.5"]
+join worker-3 3 [ z_index="1"]
+worker-1: Víš, slyšel jsem, že všechny rozhodnutí ve městě přicházejí z Nexus Innovate. Úředníci jsou jen loutky.
+worker-3: Ano, ti, kdo skutečně řídí firmu, nejsou ani lidé. Někteří říkají, že to jsou vosí lidé v přestrojení.
+leave worker-1
+[wait time="0.6"]
+leave worker-3
+Lena: Šeptem pro sebe.\
+Musím zjistit víc. Tahle pravda musí vyjít najevo.
+Lena pokračovala ve své práci, ale zároveň se snažila sbírat co nejvíce informací. Její zvědavost ji však jednoho dne dostala do potíží.
+Pracovníci šli za dveře, co má Lena dělat?
+- Poslouchat za dveřmi.
+	join c-chef 0
+	c-chef: S povzdechem.\
+Leno, co to děláš? Víš, že tě to může stát víc než jen práci?
+	Lena: S obavou v hlase.\
+Já... já jen chtěla vědět pravdu.
+	c-chef: Podívá se na ni přísně, ale zároveň s určitou soucitností.\
+Nemůžu tě tady nechat. Pokud budeš mluvit o tom, co jsi slyšela, budeš mít obrovské problémy. Bude lepší, když půjdeš.
+	leave c-chef
+	[background arg="res://graphyc/backgrounds/Home.webp" fade="2.0"]
+	[wait time="2.0"]
+	Lena byla propuštěna a vrátila se zpět na okraj města. Pan Kovář ji varoval, že pokud by o čemkoli mluvila, byla by vystavena ještě většímu nebezpečí.
+	Lena si uvědomila, že musí být opatrná, ale i přes všechny hrozby cítila, že pravda musí být odhalena.
+	leave --All--
+	[wait time="0.6"]
+	jump base/D4
+	[wait time="0.5"]
+	jump happy-path/Happy end
+- Pokračovat v práci.
+	Lena se po dlouhém dni vrací domů.
+	leave --All--
+
+label Happy end
+[background arg="res://graphyc/backgrounds/Home.webp" fade="2.0"]
+[wait time="2.0"]
+join Lena (Base) 4
+Lena: Konečně doma, byl to opravdu dlouhy den.
+Lena: Za posledních pár týdnu se toho stalo opravdu hodně.
+Už chápu jak moc sladká je nevědomost.
+Opravdu nepotřebuju žít v centu... 
+Vlastně ani nevím, jestli chi dál žít...

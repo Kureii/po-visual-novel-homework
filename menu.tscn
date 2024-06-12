@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcw66tpo6yxaw"]
+
+[ext_resource type="Texture2D" uid="uid://clccky11d5qjt" path="res://graphyc/backgrounds/Menu.png" id="1_1tghc"]
+[ext_resource type="Script" path="res://menut.gd" id="2_0tr2h"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_1tghc")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+custom_minimum_size = Vector2(0, 64.625)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+color = Color(0.088, 0.16, 0.142, 1)
+script = ExtResource("2_0tr2h")
+
+[node name="Start-btn" type="Button" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 8.0
+offset_right = 781.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 32
+text = "Start"
+flat = true
+
+[node name="Quit-btn" type="Button" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 8.0
+offset_right = 1216.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 32
+text = "Ukončit"
+flat = true
+
+[node name="Credits-btn" type="Button" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 8.0
+offset_right = 1014.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+flat = true
+
+[connection signal="pressed" from="TextureRect/ColorRect/Start-btn" to="TextureRect/ColorRect" method="_on_startbtn_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect/Quit-btn" to="TextureRect/ColorRect" method="_on_quitbtn_pressed"]

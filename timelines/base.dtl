@@ -1,0 +1,76 @@
+[style name="Styl"]
+[background arg="res://graphyc/backgrounds/City.webp" fade="2.0"]
+[wait time="2.0"]
+Aurelia Altum – Město na výši. Pokrok a inovace zde jdou ruku v ruce s pohodlím a bezpečím.
+Toto nádherné město je ukázkovým příkladem toho, jak může technologie zlepšit kvalitu života nás všech.
+Díky inovacím a neustálému vývoji od společnosti Nexus Innovate se nemusíte bát o své pohodlí. Naše chytré domy, moderní infrastruktura a špičkové zdravotnictví zajišťují, že každý obyvatel žije v harmonii a klidu.
+Nexus Innovate poskytuje občanům vše, co by jen mohli potřebovat.
+[background arg="res://graphyc/backgrounds/Hospital.webp" fade="2.0"]
+[wait time="2.0"]
+Naše společnost se stará o všechny aspekty vašeho života – od energetické účinnosti vašich domovů, přes nejnovější komunikační technologie, až po rekreační aktivity, které vám pomohou udržet se v kondici a užívat si volný čas.
+Nexus Innovate je tu pro vás, aby zajistil, že váš život bude bezstarostný a plný radosti.
+V našem městě se můžete těšit na čisté ulice, bezpečné čtvrti a přátelskou komunitu.
+Veškeré služby a zařízení jsou navrženy tak, aby splňovaly nejvyšší standardy kvality.
+[background arg="res://graphyc/backgrounds/School.webp" fade="2.0"]
+[wait time="2.0"]
+Nexus Innovate se stará o to, aby každý den byl pro vás výjimečný a plný možností.
+Od špičkových škol, přes vyspělé zdravotnické zařízení, až po různé kulturní a sportovní aktivity – Aurelia Altum nabízí něco pro každého.
+Vznik městských států jako Aurelia Altum je odpovědí na neudržitelný stav bývalých národních států. Po jejich zániku se objevila myšlenka, že jednotlivé městské státy budou efektivnější než unijní uspořádání.
+[background arg="res://graphyc/backgrounds/City.webp" fade="2.0"]
+[wait time="2.0"]
+Jedním z prvních takových států je právě Aurelia Altum.
+Tím, že každé město má vlastní zákony a samo řeší vlastní pokrok, se tato města stala ideálním prostorem pro výzkum a vývoj technologií.
+Zní to všechno krásně?
+Taky to krásné je.
+Tedy pokud patříte mezi nejvyšších 10%, v tom případě žijete v centru města a vše jmenované pro vás platí.
+[background arg="res://graphyc/backgrounds/Slums-02.webp" fade="2.0"]
+[wait time="2.0"]
+Čím dále od sídla Nexus Innovate se vaše obydlí nachází, tím méně vaše obydlí připomíná slibované ideály.
+Jediný způsob, jak se dostat z okraje města a žít lepší život, je získat práci blízko centra města.
+[background arg="res://graphyc/backgrounds/Home.webp" fade="2.0"]
+[wait time="2.0"]
+Začíná další běžný den v Aurelia Altum. Lena se budí ve své posteli, skrze plechovou střechu na ní kape voda.
+Z kapky vody padá malý záblesk slunečního světla, tvořící krátký, melancholický okamžik osamělého světla v temném pokoji.
+join Lena (Base) 4
+[wait time="0.5"]
+Lena (Base): Zase to proteklo, kolikrát to ještě budu opravovat?
+Lena vstala a oblékla se. Pohled na její skromný pokoj plný opravených děr a improvizovaných záplat připomíná, jaký kontrast představuje její život oproti slibovaným ideálům Aurelia Altum.
+[background arg="res://graphyc/backgrounds/Slums-03.webp" fade="2.0"]
+[wait time="2.0"]
+Lena si povzdechne a vyrazí do práce. Prochází chudými ulicemi okrajové čtvrti, kde se lidé těžko protloukají, a kontrast s centrem města je do očí bijící.
+Lena pracuje jako skladnice ve velkém distribučním centru na okraji města. Je to těžká práce s dlouhými směnami a mizerným platem.
+Lena: Dneska bych si mohla promluvit s šéfem o zvýšení platu, nebo aspoň o méně náročné směně.
+[background arg="res://graphyc/backgrounds/Robot-facotry.webp" fade="2.0"]
+[wait time="2.0"]
+Lena přichází do práce a setkává se se svým šéfem, panem Radkem, který je známý svou tvrdostí a neochotou udělat jakékoli ústupky.
+join Radek (Base) 0
+[wait time="0.5"]
+Radek: Leno, potřebujeme si promluvit. Vidím, že se snažíš, ale situace je složitá. Firma prochází restrukturalizací a já ti bohužel musím oznámit, že tvoje pozice bude zrušena. Ale mám pro tebe tři nové nabídky.
+Lena: Ztěžka polkne, cítí, jak se jí hroutí svět.\
+A jaké nabídky to jsou?
+Můžeš přijmout jednu z těchto tří možností\:
+- Práce v kanceláři
+	leave --All--
+	[wait time="0.5"]
+	jump bad-path/A2
+- Práce jako společnice
+	leave --All--
+	[wait time="0.5"]
+	jump neutral-path/B3
+- Těžká práce
+	leave --All--
+	[wait time="0.5"]
+	- 
+	jump happy-path/C2
+label D4
+[background arg="res://graphyc/backgrounds/Home.webp" fade="2.0"]
+[wait time="2.0"]
+join Lena (Base) 4
+[wait time="0.5"]
+Lena: Sedí v tichu, nervózně si hraje s prsty.\
+Musím se s tím svěřit někomu. Ale komu můžu opravdu věřit?
+Lena si vzpoměla jen na Petra a Annu.
+Petra má v hlavě jako člověka s pevnými zásadami a Annu jako člověka, který na ní byl vždy milý.
+-  [if {} == ""]
+	set {killer} = ""
+- 

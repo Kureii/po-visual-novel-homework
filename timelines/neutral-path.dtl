@@ -1,0 +1,62 @@
+label B3
+[style name="Styl"]
+[background arg="res://graphyc/backgrounds/City.webp" fade="2.0"]
+[wait time="2.0"]
+join Lena (Escort) 4
+Lena byla ve své nové roli společnice velmi úspěšná a rychle si získala pověst skvělé společnice mezi vyššími vrstvami města.
+[background arg="res://graphyc/backgrounds/Client-house.webp" fade="2.0"]
+[wait time="2.0"]
+join client 1
+Jednoho dne ji však čekal zvláště náročný zákazník. Byl k ní velmi hrubý a požadoval služby, které byly daleko za hranicí toho, co byla ochotna poskytnout.
+client: Se zlomyslným úsměvem.\
+Jsem zvyklý dostat, co chci. A teď chci tebe, celou noc. Budeš dělat přesně to, co ti řeknu.
+Lena: V její mysli se mísí strach a odpor, ale snaží se zůstat klidná.\
+Pane, tohle není součástí mých služeb. Prosím, pochopte.
+client: Ignoruje její protesty a začne být stále více agresivní.\
+Nemáš na výběr. Buď to uděláš, nebo budeš čelit následkům.
+Lena věděla, že její reakce na tuto situaci bude mít zásadní dopad na její budoucnost.
+- Odmítnout zákazníka
+	Lena: Neudělám to. Ať se stane cokoli
+	Zákazník se pokusí Lenu napadnout, ta však využije svojí pohiblivosti společně s vahou zákazníka, kterého shodí na skleněný stůl.
+	client: Za to zaplatíš!
+	leave --All--
+	[background arg="res://graphyc/backgrounds/Home.webp" fade="2.0"]
+	[wait time="2.0"]
+	Lena utekla na okraj města, věděla však že zákazník byl velmi vlivný , takže práci ve městě už nesežene. Jediné na co se Lena po téhle zkušenosti zmohla byl jen povzdych.
+	join Lena (Base) 4
+	Lena (Base): Zase zpátky na začátku. Ale aspoň jsem neztratila svou důstojnost.
+	jump base/D4
+- Poddat se zákazníkovi
+	set {killer} = "client"
+	client: Tohle je to, co si zasloužíš.\
+Poté co s Lenou zákazník skončil, zatáhl jí do sklepa.\
+jump Neutral end
+- Obelstít zákazníka
+	Lena se rozhodla na oko poddat zákazníkovi, ale jakmile byla situace neúnosná, její mysl zatemnil vztek. V rozhodujícím momentu na něj zaútočila s brutální silou.
+	Zvedá těžký předmět a udeří zákazníka do hlavy.
+	Lena: Dost bylo utrpení!
+	Zákazník padl k zemi, mrtvý. Když ostatní zjistili, co se stalo, byli šokováni, ale zároveň fascinováni Lenou. Její čin nebyl veřejně odsouzen, protože oběť nebyla oblíbená. Naopak, Lena byla přeřazena na pozici inkvizitora, kde mohla využít své nové, temné schopnosti. Její nadřízený se stal Pan Kilián.
+	jump A4
+
+label Neutral end
+[background arg="res://graphyc/backgrounds/Dungeon.webp" fade="2.0"]
+[wait time="2.0"]
+join Lena (Poor Lena) 4
+if {killer} == "kilian":
+	join Kilian 0
+elif {} == "client":
+	join client 0
+Dny se měnily v týdny a Lena čelila nepřetržitému utrpení. Každý den byl jiný, ale všechny byly plné bolesti a ponížení. Hlavním cílem jejích mučitelů bylo zlomit její tělo i ducha. Bez ohledu na to, co udělala, nebyla žádná úleva, žádné milosrdenství.
+if {killer} == "kilian":
+	Kilian: Tohle je to, co si zasloužíš.
+elif {} == "client":
+	client: Tohle je to, co si zasloužíš.
+Lena trpěla mnoha druhy mučení. Někdy byla připoutána a nemohla se hýbat, jindy ji nechali stát v nepřirozených polohách po dlouhé hodiny.
+Její tělo bylo vystaveno fyzickým trestům, které zanechávaly trvalé stopy. Každé gesto, každý pohyb byl pečlivě naplánovaný tak, aby způsobil maximální bolest.
+Byla jí odepřena základní lidská důstojnost, čelila ponížení, které bylo těžké snést. Lena si uvědomovala, že její mučitelé znají její slabosti a využívají je proti ní. Bylo jasné, že nezáleží na tom, že je žena; v jejich očích byla jen další oběť systému.
+Hodiny se táhly do dnů, a dny do týdnů. Lena cítila, jak její mysl postupně upadá do temnoty.
+Každý okamžik jejího utrpení byl nekonečný a Lena začala ztrácet pojem o čase. Jediným únikem byla naděje na konec, který však nikdy nepřicházel.
+Nakonec byla Lena zlomena. Její tělo bylo zmučené, její duch zničený.
+Její poslední myšlenky patřily tomu, co mohla udělat jinak, ale věděla, že žádná odpověď ji už nezachrání.
+Lena zemřela v agónii, obětí systému, který kdysi věřila, že ji zachrání.
+Její příběh byl jen jedním z mnoha v krutém světě Aurelia Altum.

@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "base",
+"description": "",
+"display_name": "Pan Elion",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(-171, 0),
+"portraits": {
+"base": {
+"export_overrides": {
+"image": "\"res://graphyc/characters/C-chef/c-chef.webp\""
+},
+"mirror": true,
+"offset": Vector2(194, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+"scale": 1.0
+}
