@@ -54,3 +54,4 @@ flat = true
 
 [connection signal="pressed" from="TextureRect/ColorRect/Start-btn" to="TextureRect/ColorRect" method="_on_startbtn_pressed"]
 [connection signal="pressed" from="TextureRect/ColorRect/Quit-btn" to="TextureRect/ColorRect" method="_on_quitbtn_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect/Credits-btn" to="TextureRect/ColorRect" method="_on_creditsbtn_pressed"]
