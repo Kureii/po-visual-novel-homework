@@ -29,8 +29,8 @@ Lena věděla, že její reakce na tuto situaci bude mít zásadní dopad na jej
 - Poddat se zákazníkovi
 	set {killer} = "client"
 	client: Tohle je to, co si zasloužíš.\
-Poté co s Lenou zákazník skončil, zatáhl jí do sklepa.\
-jump Neutral end
+	Poté co s Lenou zákazník skončil, zatáhl jí do sklepa.\
+	jump Neutral end
 - Obelstít zákazníka
 	Lena se rozhodla na oko poddat zákazníkovi, ale jakmile byla situace neúnosná, její mysl zatemnil vztek. V rozhodujícím momentu na něj zaútočila s brutální silou.
 	Zvedá těžký předmět a udeří zákazníka do hlavy.
@@ -60,3 +60,5 @@ Nakonec byla Lena zlomena. Její tělo bylo zmučené, její duch zničený.
 Její poslední myšlenky patřily tomu, co mohla udělat jinak, ale věděla, že žádná odpověď ji už nezachrání.
 Lena zemřela v agónii, obětí systému, který kdysi věřila, že ji zachrání.
 Její příběh byl jen jedním z mnoha v krutém světě Aurelia Altum.
+[background arg="res://graphyc/backgrounds/black.webp" fade="2.0"]
+[wait time="2.0"]

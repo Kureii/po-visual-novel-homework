@@ -71,6 +71,39 @@ Lena: Sedí v tichu, nervózně si hraje s prsty.\
 Musím se s tím svěřit někomu. Ale komu můžu opravdu věřit?
 Lena si vzpoměla jen na Petra a Annu.
 Petra má v hlavě jako člověka s pevnými zásadami a Annu jako člověka, který na ní byl vždy milý.
--  [if {} == ""]
-	set {killer} = ""
-- 
+- Svěřit se Petrovi [if {} == ""]
+	set {killer} = "kilian"
+	[background arg="res://graphyc/backgrounds/Pub.webp" fade="2.0"]
+	[wait time="2.0"]
+	<Empty Text Event>
+	join Petr 1
+	[wait time="0.5"]
+	Lena se rozhodla svěřit Petrovi. Doufala, že nalezne porozumění a podporu.
+	Lena: S nervozitou a nadějí.\
+Petře, musím ti něco říct. Něco, co jsem se dozvěděla, a už to nemohu držet v sobě.
+	Petr: S vážným výrazem.\
+Co se děje, Leno? Co je to tak důležitého?
+	Lena se otevřela a svěřila Petrovi všechno, co se dozvěděla. Očekávala pochopení, ale místo toho se setkala s chladným odmítnutím.
+	Tohle nemůžeš říkat. Tohle je zrada.
+	leave Petr
+	[wait time="0.5"]
+	Lena byla šokována, ale než mohla cokoliv udělat, Petr ji nahlásil systému. Lena byla zatčena a přivedena k výslechu.
+	[background arg="res://graphyc/backgrounds/black.webp" fade="2.0"]
+	[wait time="2.0"]
+	jump neutral-path/Neutral end
+- Svěřit se Anně
+	[background fade="2.0"]
+	[wait time="2.0"]
+	join Anna 1
+	[wait time="0.5"]
+	Lena se rozhodla svěřit Anně. Doufala, že tento člověk dokáže unést tíhu pravdy.
+	Lena: S nadějí a strachem v hlase.\
+Anno, musím ti něco říct. Je to velmi důležité a nemohu to dál držet v sobě.
+	Anna: Soucitně.\
+Co se děje, Leno? Můžeš mi věřit.
+	Lena se otevřela a svěřila Anně všechno, co se dozvěděla. Anna ji vyslechla, ale bylo zřejmé, že pravda je pro ni příliš těžká na to, aby ji unesla
+	Anna: To je příšerné!
+	leave Anna
+	[wait time="0.5"]
+	O několik týdnů později Lena našla Annu, která ukončila svůj život. Pravda byla příliš těžká a Lena ztratila dalšího přítele. Plná smutku a beznaděje se vrátila do svého skromného domova.
+	jump happy-path/Happy end

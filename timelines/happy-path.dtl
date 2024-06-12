@@ -60,11 +60,11 @@ Pracovníci šli za dveře, co má Lena dělat?
 - Poslouchat za dveřmi.
 	join c-chef 0
 	c-chef: S povzdechem.\
-Leno, co to děláš? Víš, že tě to může stát víc než jen práci?
+	Leno, co to děláš? Víš, že tě to může stát víc než jen práci?
 	Lena: S obavou v hlase.\
-Já... já jen chtěla vědět pravdu.
+	Já... já jen chtěla vědět pravdu.
 	c-chef: Podívá se na ni přísně, ale zároveň s určitou soucitností.\
-Nemůžu tě tady nechat. Pokud budeš mluvit o tom, co jsi slyšela, budeš mít obrovské problémy. Bude lepší, když půjdeš.
+	Nemůžu tě tady nechat. Pokud budeš mluvit o tom, co jsi slyšela, budeš mít obrovské problémy. Bude lepší, když půjdeš.
 	leave c-chef
 	[background arg="res://graphyc/backgrounds/Home.webp" fade="2.0"]
 	[wait time="2.0"]
@@ -88,3 +88,5 @@ Lena: Za posledních pár týdnu se toho stalo opravdu hodně.
 Už chápu jak moc sladká je nevědomost.
 Opravdu nepotřebuju žít v centu... 
 Vlastně ani nevím, jestli chi dál žít...
+[background arg="res://graphyc/backgrounds/black.webp" fade="2.0"]
+[wait time="2.0"]
